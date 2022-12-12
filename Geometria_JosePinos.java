@@ -45,6 +45,7 @@ public class Geometria_JosePinos {
     public void areaTriangulo(double base, double altura){
         if(base > 0.0 && altura > 0.0){
             area = base * altura / 2.0;
+            //setArea(base * altura / 2.0);
         }else{
             area = 0;
         }

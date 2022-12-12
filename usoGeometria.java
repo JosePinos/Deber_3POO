@@ -9,7 +9,6 @@ public class usoGeometria {
 
         while( opcion != 0){
             opcion = Menu();
-
             switch( opcion ) {
 
                 case 1:{
@@ -138,6 +137,7 @@ public class usoGeometria {
     public static int Menu(){
         int opcion = 1;
 
+        try{
             opcion = Integer.parseInt( JOptionPane.showInputDialog("\tCalculadora de figuras geométricas\n" +
                     "1) Área de un triángulo\n" +
                     "2) Perímetro de un triángulo\n" +
@@ -150,6 +150,11 @@ public class usoGeometria {
                     "9) Área de un trapecio\n" +
                     "10) Área y volumen de un cilindro\n" +
                     "0) SALIR" ) );
+
+        }catch (NumberFormatException e){
+            System.out.println("Solo puedes ingresar un número: "+ e);
+        };
+
 
         return opcion;
     }//fin del método menu
